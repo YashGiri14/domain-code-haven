@@ -124,12 +124,12 @@ const Index = () => {
       {/* Fixed Header */}
       <Header currentStep={currentStep} totalSteps={totalSteps} />
       
-      {/* Main Content - positioned at bottom */}
-      <div className="flex-1 flex items-end pt-[120px] sm:pt-[147px] pb-0 px-1 sm:px-4">
+      {/* Main Content - positioned at bottom with device-specific spacing */}
+      <div className="flex-1 flex items-end pt-[100px] xs:pt-[105px] sm:pt-[120px] md:pt-[147px] pb-0 px-1 xs:px-2 sm:px-4">
         <div className="max-w-2xl sm:max-w-3xl mx-auto w-full">
-          <div className="bg-white rounded-t-lg shadow-lg max-h-[calc(100vh-100px)] sm:max-h-[calc(100vh-80px)] flex flex-col">
+          <div className="bg-white rounded-t-lg shadow-lg max-h-[calc(100vh-80px)] xs:max-h-[calc(100vh-85px)] sm:max-h-[calc(100vh-100px)] md:max-h-[calc(100vh-80px)] flex flex-col">
             {/* Scrollable content area with hidden scrollbar */}
-            <div className="flex-1 overflow-y-auto p-2 sm:p-4 md:p-6 scrollbar-hide">
+            <div className="flex-1 overflow-y-auto p-2 xs:p-3 sm:p-4 md:p-6 scrollbar-hide">
               {currentStep === 0 && (
                 <ConfigurationStep
                   selectedConfig={selectedConfig}
