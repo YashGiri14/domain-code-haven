@@ -125,11 +125,11 @@ const Index = () => {
       <Header currentStep={currentStep} totalSteps={totalSteps} />
       
       {/* Main Content - positioned at bottom */}
-      <div className="flex-1 flex items-end pt-[157px] sm:pt-[147px] pb-0 px-2 sm:px-4">
+      <div className="flex-1 flex items-end pt-[120px] sm:pt-[147px] pb-0 px-1 sm:px-4">
         <div className="max-w-2xl sm:max-w-3xl mx-auto w-full">
-          <div className="bg-white rounded-t-lg shadow-lg max-h-[calc(100vh-140px)] sm:max-h-[calc(100vh-80px)] flex flex-col">
+          <div className="bg-white rounded-t-lg shadow-lg max-h-[calc(100vh-100px)] sm:max-h-[calc(100vh-80px)] flex flex-col">
             {/* Scrollable content area with hidden scrollbar */}
-            <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6 scrollbar-hide">
+            <div className="flex-1 overflow-y-auto p-2 sm:p-4 md:p-6 scrollbar-hide">
               {currentStep === 0 && (
                 <ConfigurationStep
                   selectedConfig={selectedConfig}
@@ -166,12 +166,12 @@ const Index = () => {
             </div>
             
             {/* Navigation Container integrated with main box - Fixed to bottom */}
-            <div className="bg-white border-t border-gray-100 p-3 sm:p-4 rounded-b-lg sticky bottom-0">
+            <div className="bg-white border-t border-gray-100 p-2 sm:p-4 rounded-b-lg sticky bottom-0">
               <div className="flex justify-between items-center">
                 {currentStep > 0 ? (
                   <button
                     onClick={previousStep}
-                    className="px-4 sm:px-6 py-2 text-gray-800 font-medium text-xs sm:text-sm uppercase tracking-wide hover:text-yellow-600 transition-colors"
+                    className="px-3 sm:px-6 py-2 text-gray-800 font-medium text-xs sm:text-sm uppercase tracking-wide hover:text-yellow-600 transition-colors"
                   >
                     BACK
                   </button>
@@ -181,7 +181,7 @@ const Index = () => {
                   <button
                     onClick={nextStep}
                     disabled={currentStep === 0 && !(selectedConfig && (selectedConfig === '5 BHK+' || selectedConfig === '1 BHK' || selectedConfig.includes(' - ')))}
-                    className={`px-6 sm:px-8 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm uppercase tracking-wide transition-all shadow-md ${
+                    className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm uppercase tracking-wide transition-all shadow-md ${
                       (currentStep === 0 && !(selectedConfig && (selectedConfig === '5 BHK+' || selectedConfig === '1 BHK' || selectedConfig.includes(' - '))))
                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                         : 'bg-yellow-500 text-gray-800 hover:bg-yellow-400'
@@ -201,7 +201,7 @@ const Index = () => {
                         if (submitBtn) submitBtn.click();
                       }
                     }}
-                    className="px-6 sm:px-8 py-2 sm:py-3 bg-yellow-500 text-gray-800 font-medium hover:bg-yellow-400 transition-colors rounded-full text-xs sm:text-sm uppercase tracking-wide shadow-md"
+                    className="px-4 sm:px-8 py-2 sm:py-3 bg-yellow-500 text-gray-800 font-medium hover:bg-yellow-400 transition-colors rounded-full text-xs sm:text-sm uppercase tracking-wide shadow-md"
                   >
                     SUBMIT
                   </button>
